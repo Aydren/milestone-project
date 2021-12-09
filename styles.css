@@ -1,0 +1,18 @@
+body {
+    background-color: Gainsboro;
+}
+
+.game {
+    background-color: #4666FF;
+    border: 2px solid black;
+    margin: auto;
+    height: 700px;
+    width: 900px;
+}
+
+#character {
+    background-color: black;
+    position: relative;
+    height: 10px;
+    width: 10px;
+}
