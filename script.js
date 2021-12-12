@@ -1,4 +1,31 @@
-
+window.addEventListener('keydown', e => {
+    switch (e.key) {
+        case 'ArrowUp':
+            //stops you from going down
+            if(lastInputDirection.y !== 0) break
+            //lets you go up
+            inputDirection = { x: 0, y: -1}
+            break
+        case 'ArrowDown':
+            //stops you from going up
+            if(lastInputDirection.y !== 0) break
+            //lets you go down
+            inputDirection = { x: 0, y: +1}
+            break
+        case 'ArrowLeft':
+            //stops you from going right
+            if(lastInputDirection.x !== 0) break
+            //lets you go left
+            inputDirection = { x: -1, y: 0}
+            break
+        case 'ArrowRight':
+            //stops you from going left
+            if(lastInputDirection.x !== 0) break
+            //lets you go right
+            inputDirection = { x: +1, y: 0}
+            break
+    }
+})
 /* //function to get character to move
 function moveTron() {
     let tron = document.querySelector('#character');

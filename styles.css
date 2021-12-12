@@ -19,12 +19,12 @@ body {
     border: 5px solid black;
 }
 
-#character {
-    position: relative;
-    background-color: white;
-    height: 20px;
-    width: 20px;
-    bottom: 0px;
-    left: 445px;
+.tron {
+    background-color: hsl(200, 100%, 50%);
+    border: .25vmin solid black;
 }
 
+.item {
+    background-color: hsl(50, 100%, 50%);
+    border: .25vmin solid black;
+}
