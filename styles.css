@@ -8,23 +8,19 @@ body {
     margin: 0;
 }
 
-.game {
+#game {
     margin: auto;
     display: grid;
     width: 100vmin;
     height: 100vmin;
-    grid-template-rows: repeat(50, 1fr);
-    grid-template-columns: repeat(50, 1fr);
+    grid-template-rows: repeat(25, 1fr);
+    grid-template-columns: repeat(25, 1fr);
     background-color: #4666FF;
     border: 5px solid black;
-}
-
-.tron {
-    background-color: hsl(200, 100%, 50%);
-    border: .25vmin solid black;
 }
 
 .item {
     background-color: hsl(50, 100%, 50%);
     border: .25vmin solid black;
+    border-radius: 100%;
 }
