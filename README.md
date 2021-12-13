@@ -9,7 +9,7 @@ The game will spawn different orbs around the screen and your job is to hit as m
 Todo JS:
 1. create a function that defines a 'div' with the 'class' of 'item'
 2. create a Math function that will place our 'item' on the grid randomly
-3: create a function that will make the make them disappear after how even much time is passed
+3. create a function that will make the make them disappear after how even much time is passed
 4. we need to be able to create an 'onclick' addEventListener that will notify the 'item' that it has been 'hit'
 5. we need to create a function that tell the game to add points once the item is 'hit'
 6. add a 'miss' function to 'hit' so that we can see how many times you missed and hit the 'item'
