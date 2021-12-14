@@ -1,34 +1,39 @@
 // import/s from different JS file's I may have
-import { update as updateOrb, draw as drawOrb} from './orb.js'
+import { update as updateOrb, draw as drawOrb} from './orb.js';
 
-let lastRenderTime = 0
+// defining lastRenderTime to 0 here
+let lastRenderTime = 0;
+
 // defining game board as a varible
-const gameBoard = document.getElementById('game')
+const gameBoard = document.getElementById('game');
 
 // will render the screen every second
 function main(currentTime) {
-    window.requestAnimationFrame(main)
-    const secondsSinceLastRender = (currentTime - lastRenderTime) / 1000
-    if (secondsSinceLastRender < 1 ) return
+    window.requestAnimationFrame(main);
+
+// if we change 1000 (1 second) to a smaller number number it will appear for a shorter amount of time will on the screen. And if you were to make it a bigger number it will stay on for longer.
+    const secondsSinceLastRender = (currentTime - lastRenderTime) / 3000
+    if (secondsSinceLastRender < 1 ) return;
     
     console.log('Render')
+    
 // updates our  lastRenderTime to our new currentTime
-    lastRenderTime = currentTime
+    lastRenderTime = currentTime;
     
 // call these function during every new render
-    update()
-    draw()
+    update();
+    draw();
 }
 
-window.requestAnimationFrame(main)
+window.requestAnimationFrame(main);
 
 // our update function that will update everything during each render
 function update() {
-    updateOrb()
+    updateOrb();
 }
 
 // our draw function that will add the orb to the screen during each render
 function draw() {
     gameBoard.innerHTML = ''
-    drawOrb(gameBoard)
+    drawOrb(gameBoard);
 }

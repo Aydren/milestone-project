@@ -1,5 +1,7 @@
 // import/s from different JS file's I may have
+import { orbHit } from './hit.js'
 import {randomGridPosition} from './random.js'
+
 
 // defining orbLoc
 let orbLoc = randomOrbPosition()
@@ -14,13 +16,20 @@ export function draw(gameBoard) {
     const orb = document.createElement('div')
     orb.style.gridRowStart = orbLoc.y
     orb.style.gridColumnStart = orbLoc.x
+    orb.style.zIndex = '100'
     orb.classList.add('item')
     gameBoard.appendChild(orb)
+    orb.addEventListener('click', e => {
+/*         if (orbWasHit === true){ */
+            //add 1 point to score and remove current 'item' and place a new one
+            orbHit()
+            console.log(orbHit, 'orb was hit')
+        /* } */
+    })
 }
 
 // function that tells the orb to go on a random spot on the grid
 function randomOrbPosition() {
-    let newOrbPosition
-    newOrbPosition = randomGridPosition()
+    let newOrbPosition = randomGridPosition()
     return newOrbPosition
 }

@@ -1,6 +1,6 @@
 //idea came from a snake code along I did
 //just a variable for the grid size
-const grid = 25
+const grid = 26
 
 //puts an object on a random location within the grid size
 export function randomGridPosition() {
