@@ -5,14 +5,14 @@ import { update as updateOrb, draw as drawOrb} from './orb.js';
 let lastRenderTime = 0;
 
 // defining game board as a varible
-const gameBoard = document.getElementById('game');
+export const gameBoard = document.getElementById('game');
 
 // will render the screen every second
 function main(currentTime) {
     window.requestAnimationFrame(main);
 
 // if we change 1000 (1 second) to a smaller number number it will appear for a shorter amount of time will on the screen. And if you were to make it a bigger number it will stay on for longer.
-    const secondsSinceLastRender = (currentTime - lastRenderTime) / 3000
+    const secondsSinceLastRender = (currentTime - lastRenderTime) / 1000
     if (secondsSinceLastRender < 1 ) return;
     
     console.log('Render')
@@ -23,6 +23,7 @@ function main(currentTime) {
 // call these function during every new render
     update();
     draw();
+    gameBoard.addEventListener('click', print)
 }
 
 window.requestAnimationFrame(main);
@@ -36,4 +37,7 @@ function update() {
 function draw() {
     gameBoard.innerHTML = ''
     drawOrb(gameBoard);
+}
+export let print = function(){
+    console.log('you missed')
 }
