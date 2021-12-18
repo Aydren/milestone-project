@@ -3,6 +3,7 @@ body {
     min-height: 100vh;
     min-width: 100vw;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 0;
@@ -11,20 +12,32 @@ body {
 #game {
     margin: auto;
     display: grid;
-    width: 100vmin;
-    height: 100vmin;
+    width: 90vmin;
+    height: 90vmin;
     grid-template-rows: repeat(26, 1fr);
     grid-template-columns: repeat(26, 1fr);
     background-color: #4666FF;
-    border: 5px solid black;
+    border: 2px solid black;
 }
 
 #score {
-    display: block;
-    position: absolute;
-    margin: 0;
-    left: 10px;
-    top: 10px;
+    display: grid;
+    margin: auto;
+    width: 80vmin;
+    height: 4.5vmin;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: Gainsboro;
+    text-align: center;
+}
+#timer {
+    display: grid;
+    margin: auto;
+    width: 80vmin;
+    height: 4.5vmin;
+    grid-template-columns: 1fr;
+    background-color: Gainsboro;
+    text-align: center;
+    font-size: 2em;
 }
 
 .item {

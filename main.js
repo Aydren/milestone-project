@@ -1,5 +1,8 @@
 // import/s from different JS file's I may have
+import { print } from './hitDetection.js'
 import { update as updateOrb, draw as drawOrb} from './orb.js';
+import { update as updateScore, scoreBoardImport } from './scoreboard.js';
+import { countdownTimer } from './timer.js';
 
 // defining lastRenderTime to 0 here
 let lastRenderTime = 0;
@@ -31,6 +34,7 @@ window.requestAnimationFrame(main);
 // our update function that will update everything during each render
 function update() {
     updateOrb();
+    updateScore()
 }
 
 // our draw function that will add the orb to the screen during each render
@@ -38,6 +42,9 @@ function draw() {
     gameBoard.innerHTML = ''
     drawOrb(gameBoard);
 }
-export let print = function(){
-    console.log('you missed')
-}
+
+// appending score board to HTML
+scoreBoardImport()
+
+// updating countdown timer
+countdownTimer()
