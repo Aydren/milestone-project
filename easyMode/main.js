@@ -15,7 +15,7 @@ function main(currentTime) {
     window.requestAnimationFrame(main);
 
 // if we change 1000 (1 second) to a smaller number number it will appear for a shorter amount of time will on the screen. And if you were to make it a bigger number it will stay on for longer.
-    const secondsSinceLastRender = (currentTime - lastRenderTime) / 1000
+    const secondsSinceLastRender = (currentTime - lastRenderTime) / 1600
     if (secondsSinceLastRender < 1 ) return;
     
     console.log('Render')

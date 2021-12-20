@@ -1,5 +1,5 @@
 // setting countdownTimer starting time
-let time = 30;
+let time = 31;
 
 // creating and updating the countdownTimer on page
 export function countdownTimer() {
@@ -7,9 +7,9 @@ export function countdownTimer() {
     time = time - 1;
     if (time < 30){
         timer.innerText = time;
-    } if (time < 0) {
+    } if (time < 1) {
         window.clearInterval(updateTime);
-        confirm('Times Up! Press ENTER to restart \nYou Hit \nYou Missed')
+        confirm('Times Up! \n\nPress ENTER to restart')
         window.location = './'
     }
     return
