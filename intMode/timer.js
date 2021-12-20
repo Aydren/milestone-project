@@ -9,8 +9,8 @@ export function countdownTimer() {
         timer.innerText = time;
     } if (time < 1) {
         window.clearInterval(updateTime);
-        confirm('Times Up! \n\nPress ENTER to restart')
-        window.location = '/'
+        confirm('Times Up! \n\nPress OK to restart')
+        window.location = './'
     }
     return
 }

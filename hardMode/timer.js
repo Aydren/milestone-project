@@ -7,10 +7,10 @@ export function countdownTimer() {
     time = time - 1;
     if (time < 30){
         timer.innerText = time;
-    } if (time < 25) {
+    } if (time < 1) {
         window.clearInterval(updateTime);
-        ('Times Up! \n\nPress ENTER to restart')
-        window.location = '/'
+        confirm('Times Up! \n\nPress OK to restart')
+        window.location = './'
     }
     return
 }

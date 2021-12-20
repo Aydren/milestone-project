@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Genos:wght@500&display=swap');
+* {
+    font-family: 'Genos', sans-serif;
+    font-size: 800;
+}
+
 body {
     background-color: Gainsboro;
     min-height: 100vh;
@@ -18,6 +24,7 @@ body {
     grid-template-columns: repeat(26, 1fr);
     background-color: #4666FF;
     border: 2px solid black;
+    cursor: crosshair;
 }
 
 #score {
@@ -47,9 +54,36 @@ body {
     position: relative;
 }
 
+#easy, #int, #hard {
+    position: fixed;
+    border-radius: 6px;
+}
 
+#easy {
+    top: 50vh;
+    left: 48vw;
+}
 
-a {
-    color: black;
-    text-decoration: none;
+#int {
+    top: 53vh;
+    left: 46vw;
+}
+
+#hard {
+    top: 56vh;
+    left: 48vw;
+}
+
+#easy:hover {
+    
+}
+
+#int:hover {
+    top: 53vh;
+    left: 46vw;
+}
+
+#hard:hover {
+    top: 56vh;
+    left: 48vw;
 }
